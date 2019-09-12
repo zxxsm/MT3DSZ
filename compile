@@ -1,0 +1,5 @@
+mpicc -c -g -O2 -fopenmp *.c -I./include
+#mpicxx -g -O2 -fopenmp -o test *.o /vol7/home/test653/zxx/lib/libsuperlu_dist.a /vol7/home/test653/zxx/lib/libopenblas.a /vol7/home/test653/zxx/lib/libparmetis.a /vol7/home/test653/zxx/lib/libmetis.a /vol7/home/test653/zxx/mpi3-gcc/lib/libmpi.a /vol7/home/test653/zxx/mpi3-gcc/lib/libmpicxx.a -lm
+mpicxx -g -O2 -fopenmp -o test *.o /vol7/home/test653/zxx/lib/libsuperlu_dist.a /vol7/home/test653/zxx/lib/libopenblas.a /vol7/home/test653/zxx/lib/libparmetis.a /vol7/home/test653/zxx/lib/libmetis.a -lm
+mv test example
+rm *.o
